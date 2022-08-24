@@ -2,7 +2,7 @@
 public class LeetCode {
 
 
-    public static  int search(int[] nums, int target) {
+    public static  int searchInRotatedArr(int[] nums, int target) {
         int low = 0;
         int high = nums.length;
         while(low<high){
@@ -14,10 +14,13 @@ public class LeetCode {
                 }else{
                     low = mid+1;
                 }
-            } else if () {
-
+            } else if(nums[mid]<=nums[high]){
+                if(nums[mid]<target && nums[high]>=target){
+                    low = mid+1;
+                }else high= mid-1;
             }
         }
+        return -1;
     }
     public static void main(String[] args) {
 //        System.out.println(maxArea(new int[]{1,8,6,2,5,4,8,3,7}));
