@@ -4,8 +4,8 @@ public class LeetCode {
 
     public static  int searchInRotatedArr(int[] nums, int target) {
         int low = 0;
-        int high = nums.length;
-        while(low<high){
+        int high = nums.length-1;
+        while(low<=high){
             int mid = (low+high)/2;
             if(nums[mid] == target) return mid;
             if (nums[low] <= nums[mid]){
